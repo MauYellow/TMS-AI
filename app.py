@@ -84,27 +84,41 @@ def chiedi_ai(domanda, file_path, topic):
     print(response.choices[0].message.content)
     if "it seems i" in response.choices[0].message.content.lower():
         print("Loggin the question in the excel file..")
-        salva_domanda_excel(domanda, topic)
+        esito = False
+        salva_excel(domanda, topic, esito, "No answer provided")
+    else:
+        print("Logging the answers in the excel file..")
+        esito = True
+        salva_excel(domanda, topic, esito, response.choices[0].message.content)
     return response.choices[0].message.content
 
-def salva_domanda_excel(domanda, topic):
+def salva_excel(domanda, topic, esito, risposta):
     print(f"Scrivendo sul file Excel: {domanda}, {topic}")
     path_file = os.path.join("Report", "Report.xlsx")
+
     if not os.path.exists(path_file):
         print("❌ Il file Report.xlsx non esiste.")
         return
 
     wb = load_workbook(path_file)
-    ws = wb.active
+    print("Fogli disponibili nel file:", wb.sheetnames)
+
+    if esito == False:
+      ws = wb["Unsolved Questions"]
+    else:
+      ws = wb["Solved Answers"]
 
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     try:
-        ws.append([timestamp, domanda, topic, "New"])
+        ws.append([timestamp, domanda, topic, "New", risposta])
         wb.save(path_file)
+        print("✅ Salvato in Report.xlsx")
+
     except Exception as e:
         print(f"Error: {e}")
+        print("❌ Domanda non salvata in Report.xlsx")
 
-    print("✅ Domanda salvata in Report.xlsx")
+    
 
 #salva_domanda_excel()
 
