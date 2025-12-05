@@ -52,7 +52,8 @@ MANUALI = {
     "4": ("POI Management", "POI Management.docx"),
     "5": ("Check In/Out and Shifts", "checkin and shift.docx"),
     "6": ("TXB Orders and Timeline", "TXB Orders and Timeline.docx"),
-    "7": ("Livechat & Workgroup", "livechat and workgroup.docx")
+    "7": ("Livechat & Workgroup", "livechat and workgroup.docx"),
+    "8": ("Bus Management", "Bus Management.docx")
 }
 
 
@@ -131,6 +132,7 @@ if __name__ == "__main__":
         print("2) Driver e Client App")
         print("3) Livechat (Non ancora pronto)")
         print("4) POI Management")
+        print("5) Bus Management")
         scelta = input("Digita 1 o 2 (oppure 'q' per uscire): ").strip()
 
         if scelta.lower() == "q":

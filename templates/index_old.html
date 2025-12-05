@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>TMS AI</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+                        
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="/static/css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="/static/css/templatemo-topic-listing.css" rel="stylesheet">      
+
+    </head>
+    
+    <body id="top">
+
+        <style>
+            body {
+                padding-top: 56px; /* Adjust if your navbar is taller */
+            }
+            @media (max-width: 991.98px) {
+                body {
+                    padding-top: 0;
+                }
+            }
+        </style>
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img width="64" height="64" src="https://img.icons8.com/nolan/64/cursor-ai.png" alt="cursor-ai" />
+                        <span>Ciro AI</span>
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-4">
+                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_1">Home</a>
+                            </li>
+    
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_4">FAQs</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="/download-report">Unsolved Questions</a>
+                            </li>
+                            
+
+                        </ul>
+
+                        <div class="d-none d-lg-block">
+                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+
+            <section class="py-5 bg-light">
+                <div class="container">
+                    <div class="row">
+            
+                        <!-- 🔴 Colonna Sinistra: Box AI Powered & Finance -->
+                        <div class="col-lg-3 col-12 mb-4">
+                            <div class="custom-block bg-white shadow-lg mb-4" style="height: 400px; overflow: hidden;">
+
+                                <div class="d-flex">
+                                    <div>
+                                        <h5 class="mb-2">AI Powered</h5>
+                                        <p class="mb-0">All the answers are provided based on official manuals and elaborated with AI.</p>
+                                    </div>
+                                </div>
+                                <img src="/static/images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
+                            </div>
+            
+                            <div class="custom-block custom-block-overlay" style="height: 100px; overflow: hidden;">
+                                <div class="d-flex flex-column h-100">
+                                    <img src="/static/images/businesswoman-using-tablet-analysis.jpg"
+                                        class="custom-block-image img-fluid" alt="">
+                                    <div class="custom-block-overlay-text d-flex">
+                                        <div>
+                                            <h5 class="text-white mb-2">Finance</h5>
+                                            <p class="text-white">This tool is completely free.. for NOW!</p>
+                                            <a href="#" class="btn custom-btn mt-2 mt-lg-3">Learn more</a>
+                                        </div>
+                                    </div>
+                                    <div class="section-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- 🟢 Colonna Destra: Dropdown + Search + Risposta AI -->
+                        <div class="col-lg-9 col-12">
+                            <h2 class="text-dark text-center mb-3">Discover. Learn. Enjoy</h2>
+                            <h6 class="text-center text-muted mb-4">Internal Support for TMS</h6>
+                            <p class="copyright-text text-center mt-lg-5 mt-4">Made with ❤️ by <a href="https://www.linkedin.com/in/maurizio-polverini-food-and-beverage-manager/" target="_blank">Maurizio Polverini</a></p>
+            
+                            <!-- Dropdown -->
+                            <div class="mb-3">
+                                <select class="form-select form-select-lg" name="category" id="category">
+                                    <option selected disabled>Please Choose Topic Category</option>
+                                    <option value="2">Account Management</option>
+                                    <option value="4">Control Room</option>
+                                    <option value="5">Fleet Management System</option>
+                                    <option value="6">AV Management System</option>
+                                    <option value="7">GIS & POIs</option>
+                                    <option value="8">Bus Managemet System</option>
+                                    <option value="9">Reports</option>
+                                </select>
+                            </div>
+            
+                            <!-- Search form -->
+                            <form method="get" id="search-form" class="custom-form mb-4" role="search">
+                                <div class="input-group">
+                                    
+                                    <input name="keyword" type="search" class="form-control form-control-lg" id="keyword"
+                                        placeholder="Ask me anything..." aria-label="Search">
+                            
+                                    <button type="submit" class="btn btn-primary">
+                                        
+                                        <i class="bi bi-search">
+                                        </i>
+                                            
+                                    </button>
+                                </div>
+                            </form>
+                            
+        
+                            <!-- AI Response box -->
+                            <div id="ai-response-box" class="custom-block bg-white shadow-lg p-4" style="max-height: 400px; overflow-y: auto;">
+                                <h5 class="mb-3">AI Response</h5>
+                                <p class="text-muted mb-0" style="font-size: 1.1rem; font-family: 'Open Sans', sans-serif;">
+                                    The AI response will appear here after your question is submitted.
+                                </p>
+                            </div>
+                            
+
+                        </div>
+            
+                    </div>
+                </div>
+            </section>
+            
+            <section class="faq-section section-padding" id="section_4">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12">
+                            <h2 class="mb-4">Frequently Asked Questions</h2>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="col-lg-5 col-12">
+                            <img src="/static/images/faq_graphic.jpg" class="img-fluid" alt="FAQs">
+                        </div>
+
+                        <div class="col-lg-6 col-12 m-auto">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What is TMS & AI?
+                                        </button>
+                                    </h2>
+
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            This unofficial and internal tool provides realtime help for TMS users based on manuals. <strong>You are not allowed to share this app and its use is indetend to be internal</strong>.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How does it work?
+                                    </button>
+                                    </h2>
+
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Easy as it seems, you choose the topic and ask the question. Please make sure the topic is correct or the app won't give you the correct answer.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Is it free?
+                                    </button>
+                                    </h2>
+
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            At the moment it's <strong>free</strong>, I'm covering the costs for this app, but <strong>if they will rise in the future based on usage, i might ask for a donation to cover the costs.</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+<footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand mb-2" href="index.html">
+                            <i class="bi-back"></i>
+                            <span>TMS & AI</span>
+                        </a>
+                    </div>
+
+
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Information</h6>
+
+                        <p class="text-white d-flex mb-1">
+                            <a href="https://www.linkedin.com/in/maurizio-polverini-food-and-beverage-manager/" class="site-footer-link" target="_blank">
+                                LinkedIn
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                        <p class="copyright-text mt-lg-5 mt-4">Made with ❤️
+                        <br><br>Designer: Maurizio Polverini</a></p>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/bootstrap.bundle.min.js"></script>
+        <script src="/static/js/jquery.sticky.js"></script>
+        <script src="/static/js/click-scroll.js"></script>
+        <script src="/static/js/custom.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.getElementById("search-form");
+                const keywordInput = document.getElementById("keyword");
+                const responseBox = document.getElementById("ai-response-box");
+                const categorySelect = document.getElementById("category");
+
+                if (!form || !keywordInput || !responseBox || !categorySelect) {
+                    console.error("Form o elementi mancanti!");
+                    return;
+                }
+
+                form.addEventListener("submit", async function (e) {
+                    e.preventDefault();
+                    const keyword = keywordInput.value.trim();
+                    const category = categorySelect.value;
+
+                    if (!keyword || !category || category === "Please Choose Topic Category") {
+                        responseBox.innerHTML = "<p class='text-warning'>Please select a valid category and enter a question.</p>";
+                        return;
+                    }
+
+                    responseBox.innerHTML = "<p class='text-muted'>Loading...</p>";
+
+                    try {
+                        const response = await fetch("/ask", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ question: keyword, category: category }),
+                        });
+
+                        const data = await response.json();
+                        responseBox.innerHTML = `<pre style="font-size: 1.1rem; font-family: 'Open Sans', sans-serif; white-space: pre-wrap;">${data.answer}</pre>`;
+                    } catch (err) {
+                        responseBox.innerHTML = `<p class='text-danger'>Errore: ${err.message}</p>`;
+                        console.error(err);
+                    }
+                });
+            });
+        </script>
+        
+            
+
+
+
+    </body>
+</html>
